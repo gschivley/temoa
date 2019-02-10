@@ -20,7 +20,10 @@ received this license file.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from operator import itemgetter as iget
-from cStringIO import StringIO
+try:
+    from cStringIO import StringIO
+except ImportError:
+    from io import StringIO
 from itertools import product as cross_product, islice, izip
 from sys import argv, stderr as SE, stdout as SO
 

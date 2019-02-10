@@ -29,7 +29,10 @@ received this license file.  If not, see <http://www.gnu.org/licenses/>.
 __all__ = ('pformat_results', 'stringify_data')
 
 from collections import defaultdict
-from cStringIO import StringIO
+try:
+    from cStringIO import StringIO
+except ImportError:
+    from io import StringIO
 from sys import stderr as SE, stdout as SO
 from temoa_config import TemoaConfig
 from shutil import rmtree

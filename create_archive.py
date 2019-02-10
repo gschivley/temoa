@@ -26,7 +26,10 @@ received this license file.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
 
-from cStringIO import StringIO
+try:
+    from cStringIO import StringIO
+except ImportError:
+    from io import StringIO
 from zipfile import PyZipFile, ZIP_DEFLATED
 
 temoa_pkg = StringIO()
