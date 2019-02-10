@@ -1,0 +1,17 @@
+name: temoa
+channels:
+    - defaults
+    - conda-forge
+dependencies:
+    - python=3
+    - pyomo
+    - sqlite3
+    - xlwt
+    - ipython
+    - matplotlib
+    - pandas
+    - joblib
+    - salib
+    - pydoe
+    - pyutilib
+    - glpk
