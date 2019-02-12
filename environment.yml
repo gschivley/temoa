@@ -1,11 +1,10 @@
-name: temoa
+name: temoa-py2
 channels:
     - defaults
     - conda-forge
 dependencies:
-    - python=3
+    - python=2
     - pyomo
-    - sqlite3
     - xlwt
     - ipython
     - matplotlib
