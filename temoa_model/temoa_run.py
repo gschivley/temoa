@@ -420,7 +420,7 @@ def get_solvers():
 	logger.disabled = True  # no need for warnings: it's what we're testing!
 	
 	available_solvers = set()
-	for sname in SF.services():   # list of solver interface names
+	for sname in ['glpk', 'cplex', 'gurobi', 'cbc']: #SF.services():   # list of solver interface names
 		# initial underscore ('_'): Pyomo's method to mark non-public plugins
 		if '_' == sname[0]: continue
 
