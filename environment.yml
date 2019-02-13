@@ -4,7 +4,7 @@ channels:
     - conda-forge
 dependencies:
     - python=2
-    - pyomo
+    - pyomo=5.5
     - xlwt
     - ipython
     - matplotlib
