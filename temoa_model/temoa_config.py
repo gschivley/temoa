@@ -225,7 +225,11 @@ class TemoaConfig( object ):
     t_ANY_ignore  = '[ \t]'
     
     def __init__(self, **kwargs):
-        from Queue import Queue
+        try: 
+            from Queue import Queue
+        except ImportError:
+            from queue import Queue
+        # from Queue import Queue
         
         self.__error          = list()
         self.__mga_todo       = Queue()
